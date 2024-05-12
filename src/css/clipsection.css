@@ -1,0 +1,60 @@
+.clip_section {
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+.clip_section .clips {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #ccc;
+    margin: 0rem 2rem 2rem 2rem;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.clip_section .clips .date {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.clip_section .clips .content {
+    margin-top: .5rem;
+    width: 90%;
+    font-size: small;
+}
+
+.clip_section .logo {
+    display: none;
+}
+
+.clip_section .hamburger_menu {
+    display: none;
+}
+
+.clip_section .menu {
+    display: none;
+}
+
+.copyicon {
+    position: absolute;
+    left: 96.7%;
+    top: 0%;
+    width: 2rem;
+    height: 2rem;
+    background-color: #000;
+    border-radius: 10px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 0%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.down {
+    top: 62%;
+}

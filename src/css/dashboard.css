@@ -1,0 +1,12 @@
+.sections {
+    display: flex;
+}
+
+.section1 {
+    width: 20%;
+}
+
+.section2 {
+    width: 80%;
+    position: relative;
+}

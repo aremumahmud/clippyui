@@ -1,0 +1,190 @@
+/* mobile responsiveness  */
+
+@media (max-width:481px) {
+    /* loader page  */
+    .loader .logo img {
+        width: 60%;
+    }
+    /* header */
+    .header img {
+        width: 40% !important;
+    }
+    .section1 {
+        display: none;
+    }
+    .section2 {
+        width: 100% !important;
+    }
+    /* clips */
+    .copyicon {
+        /* position: absolute; */
+        left: 90.7% !important;
+    }
+    .input_wrap {
+        display: flex;
+        position: fixed;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .input_ {
+        width: 90% !important;
+    }
+    /* mobile header */
+    .mobile_head {
+        position: fixed;
+        background-color: #ccc;
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        z-index: 1000;
+        flex-direction: column;
+    }
+    .mobile_head .logo img {
+        width: 30%;
+    }
+    .mobile_head .menu {
+        border-top: 2px solid;
+        width: 100%;
+        transition: width 4s;
+    }
+    .mobile_head .user_bar {
+        /* border: 1px solid; */
+        padding: 1rem;
+        margin-top: 1rem;
+        width: 80% !important;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-left: 0;
+    }
+    .mobile_head .user_bar .info p {
+        font-size: small;
+        line-height: .3rem;
+    }
+    .mobile_head .user_bar .info p:first-child {
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+    .mobile_head .user_bar .image {
+        /* border: 1px solid; */
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .mobile_head .menu ul {
+        padding: 0;
+        list-style-type: none;
+    }
+    .mobile_head .menu ul li a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
+        color: #000;
+        text-decoration: none;
+    }
+    .mobile_head .menu ul li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
+        color: #000;
+    }
+    .clips_list {
+        padding-top: 40% !important;
+    }
+    .header {
+        padding: 0;
+        margin: 0;
+        display: none !important;
+    }
+    .card {
+        font-family: 'Work Sans', sans-serif !important;
+        width: 85% !important;
+    }
+    .clip_section .head {
+        display: flex;
+    }
+    .clip_section .logo {
+        display: block !important;
+    }
+    .clip_section .hamburger_menu {
+        display: block !important;
+    }
+    .landing-page .content .image img {
+        display: none !important;
+    }
+    .about-section .image-column {
+        display: none !important;
+    }
+    .about-section .content-column {
+        width: 100% !important;
+    }
+    .about-section .content-column .inner-column {
+        padding-right: 0 !important;
+    }
+    .non_header {
+        display: none !important;
+    }
+    .landing-page .content {
+        padding-top: 20% !important;
+    }
+    .landing-page .content .info {
+        text-align: left !important;
+    }
+    .landing-page .content .info h1 {
+        font-size: 2.5rem !important;
+    }
+    .about-section {
+        position: relative;
+        padding: 0px 0px !important;
+    }
+    .backside {
+        color: #fff !important;
+        display: flex;
+        align-items: center !important;
+        padding: 10px !important;
+        width: 85% !important;
+        border-radius: 15px;
+        margin-top: 15px
+    }
+    .footer_socials {
+        flex-direction: column;
+    }
+}
+
+li {
+    cursor: pointer;
+}
+
+.image_pane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.user_bar .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.clip_empty {
+    /* border: 1px solid; */
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
