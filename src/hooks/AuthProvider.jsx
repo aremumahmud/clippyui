@@ -45,6 +45,8 @@ const AuthProvider = ({ children }) => {
   };
   const registerAction = async (data , dispatch ,dispatchError, setLoad) => {
     try {
+
+    
       const response = await fetch(uri.server + "register", {
         method: "POST",
         headers: {

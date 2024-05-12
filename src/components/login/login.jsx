@@ -1,16 +1,29 @@
+import { useState } from "react";
+import ForgttenModal from "../forgotten";
 import Header from "../header";
 import Form from "./Form";
 import './login.css'
 
-function Login({register, Link}){
+
+function Login({register, Link ,  success}){
+
+    const [modal , setModal] = useState(false)
+
     return (
-        <div className="wrapper">
+        <>
+        {
+            modal && <ForgttenModal success={success} closeModal={()=>setModal(false)} />
+        }
+        
+         <div className="wrapper">
               <Header username={''}/>
              <div className="login">
           
-            <Form register={register} Link={Link}/>
+            <Form openModal={()=>{setModal(true)}} register={register} Link={Link}/>
         </div> 
         </div>
+        </>
+       
        
     )
 }

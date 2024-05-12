@@ -69,8 +69,8 @@ function App() {
     <AuthProvider>
        <Routes>
           <Route path="/" element={<Loader Link={Link}/>}/>
-          <Route path="/login" element={<Login Link={Link}/>} />
-          <Route path="/register" element={<Login register={true} Link={Link}/>} />
+          <Route path="/login" element={<Login success={success} Link={Link}/>} />
+          <Route path="/register" element={<Login  success={success}  register={true} Link={Link}/>} />
           <Route path="/home" element={<Home />} />
           <Route element={<PrivateRoute />}>
               <Route path="/dashboard" element={<Dashboard success={success} error={error} copy={clipboardCopy} />} />

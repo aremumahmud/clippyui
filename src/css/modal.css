@@ -60,7 +60,11 @@
     text-align: center;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    cursor: pointer;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mark-as-read_invert,
@@ -68,11 +72,15 @@
     display: inline-block;
     border-radius: 0.5rem;
     width: 90%;
+    cursor: pointer;
     padding: 0.75rem 1.25rem;
     text-align: center;
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .read {
@@ -83,6 +91,7 @@
 .read_invert {
     background-color: rgba(249, 250, 251, 1);
     color: rgba(107, 114, 128, 1);
+    color: #000;
 }
 
 .mark-as-read {
@@ -116,4 +125,8 @@
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.192);
     z-index: 10000;
+}
+
+.dark div {
+    background-color: #000;
 }

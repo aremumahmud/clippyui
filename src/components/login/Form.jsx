@@ -4,17 +4,29 @@ import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import Loaders from "./loaders";
 
-function Form({register , Link}) {
+function Form({register , Link , openModal}) {
 
    const auth = useAuth();
    let [error , setError] = useState('')
    let [sucess , setSucess] = useState('')
    let [load , setLoad] = useState(false)
+   let [viewToggle , setViewToggle] = useState(false)
 
    
 
    let emailRef = useRef()
    let passwordRef = useRef()
+
+   let registeraction = ({username, password})=>{
+    if(password.length < 8){
+        setLoad(false) 
+      setError('Passwords should be at least 8 characters')
+     
+      return
+
+     }
+     auth.registerAction({username, password} ,setSucess ,setError, setLoad)
+   }
 
   let handleSubmit = (e)=>{
     e.preventDefault()
@@ -23,10 +35,10 @@ function Form({register , Link}) {
 
     if(username && password){
       // alert( password)
-      
-      register? auth.registerAction({username, password} ,setSucess ,setError, setLoad):
-      auth.loginAction({username, password} ,setSucess ,setError, setLoad)
       setLoad(true)
+      register?registeraction({username, password}):
+      auth.loginAction({username, password} ,setSucess ,setError, setLoad)
+  
       return 
     }
 
@@ -69,13 +81,14 @@ function Form({register , Link}) {
           <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path>
         </svg>
         <input
-          type="password"
+          type={!viewToggle?"password":'text'}
           className="input"
           placeholder="Enter your Password"
           required
           ref={passwordRef}
         />
         <svg
+        onClick={()=>setViewToggle(toggle=>!toggle)}
           viewBox="0 0 576 512"
           height="1em"
           xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +101,7 @@ function Form({register , Link}) {
           <input type="checkbox" />
           <label>Remember me </label>
         </div>
-        <span className="span">Forgot password?</span>
+        <span onClick={openModal} className="span">Forgot password?</span>
       </div>
       <button className="button-submit center">
         {
