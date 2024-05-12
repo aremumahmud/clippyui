@@ -1,5 +1,5 @@
 const uri = {
-    server: '/',
+    server: 'https://clippyasst.onrender.com/',
     github: 'aremumahmud',
     instagram: 'Devsdytok',
     twitter: 'Devsdytok',
